@@ -30,11 +30,11 @@ class ProfileFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val firstNameTextView = view.findViewById<TextView>(R.id.tv_first_name)
-        firstNameTextView.text = firstName
+        val firstNameText = view.findViewById<TextView>(R.id.tv_first_name)
+        firstNameText.text = firstName
 
-        val lastNameTextView = view.findViewById<TextView>(R.id.tv_last_name)
-        lastNameTextView.text = lastName
+        val lastNameText = view.findViewById<TextView>(R.id.tv_last_name)
+        lastNameText.text = lastName
     }
 
     companion object {

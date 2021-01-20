@@ -12,18 +12,18 @@ import com.natashaval.futuredatabinding.model.User
 
 class MainActivity : AppCompatActivity() {
 
-  private var user = User("Natasha", "Santoso")
+  private val user = User("Natasha", "Santoso")
   private lateinit var score: TextView
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    val firstName = findViewById<TextView>(R.id.tv_first_name)
-    firstName.text = user.firstName
+    val firstNameText = findViewById<TextView>(R.id.tv_first_name)
+    firstNameText.text = user.firstName
 
-    val lastName = findViewById<TextView>(R.id.tv_last_name)
-    lastName.text = user.lastName
+    val lastNameText = findViewById<TextView>(R.id.tv_last_name)
+    lastNameText.text = user.lastName
 
     score = findViewById<TextView>(R.id.tv_score)
     score.text = user.score.toString()
