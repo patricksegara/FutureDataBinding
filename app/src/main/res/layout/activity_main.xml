@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: A2. Convert to DataBinding layout and bind User data -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -94,6 +95,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!--    TODO: A10. set bt_score_minus visibility to GONE if score = 0 in custom attributes -->
     <Button
         android:id="@+id/bt_score_minus"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
@@ -102,11 +104,13 @@
         android:text="@string/score_minus"
         android:textSize="@dimen/score_size"
         android:backgroundTint="@color/colorAccent"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_score"
         app:layout_constraintBottom_toBottomOf="@id/tv_score"
         app:layout_constraintEnd_toStartOf="@id/tv_score" />
 
+<!--    TODO: A9. set bt_score_plus visibility to GONE if score = 20 in android:visibility attributes -->
     <Button
         android:id="@+id/bt_score_plus"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
@@ -115,6 +119,7 @@
         android:text="@string/score_plus"
         android:textSize="@dimen/score_size"
         android:backgroundTint="@color/colorAccent"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@id/tv_score"
         app:layout_constraintTop_toTopOf="@id/tv_score"
         app:layout_constraintBottom_toBottomOf="@id/tv_score"

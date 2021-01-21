@@ -25,11 +25,13 @@ class ProfileFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // TODO: B4. implement how to use viewBinding in Fragment
         return inflater.inflate(R.layout.activity_profile, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // TODO: B5. change firstName and lastName to your own name with viewbinding
         val firstNameText = view.findViewById<TextView>(R.id.tv_first_name)
         firstNameText.text = firstName
 
