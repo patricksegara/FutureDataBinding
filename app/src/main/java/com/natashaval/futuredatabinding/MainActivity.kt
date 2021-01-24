@@ -6,9 +6,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.natashaval.futuredatabinding.ProfileActivity.Companion.FIRST_NAME_KEY
 import com.natashaval.futuredatabinding.ProfileActivity.Companion.LAST_NAME_KEY
+import com.natashaval.futuredatabinding.databinding.ActivityMainBinding
 import com.natashaval.futuredatabinding.model.User
 import com.natashaval.futuredatabinding.viewmodel.MainViewModel
 
@@ -16,15 +18,17 @@ class MainActivity : AppCompatActivity() {
 
   private val viewModel by lazy { ViewModelProviders.of(this).get(MainViewModel::class.java) }
 
-  private val user = User("Your", "Name")
+  private val user = User("Patrick", "Segara")
   private lateinit var score: TextView
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     // TODO: A3. change how to inflate with DataBinding
-    setContentView(R.layout.activity_main)
+    val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
     // TODO: A4. bind user and score data with name UI
+    binding.user = user
+
     val firstNameText = findViewById<TextView>(R.id.tv_first_name)
     firstNameText.text = user.firstName
 

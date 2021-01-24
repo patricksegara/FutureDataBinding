@@ -4,13 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "30.0.0"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.natashaval.futuredatabinding"
-        minSdkVersion 23
-        targetSdkVersion 29
+        minSdkVersion 16
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -24,8 +24,13 @@ android {
         }
     }
     // TODO: A1. enable DataBinding in build.gradle
-
+    buildFeatures{
+        dataBinding true
+    }
     // TODO: B1. enable ViewBinding in build.gradle
+    buildFeatures{
+        viewBinding true
+    }
 }
 
 dependencies {
